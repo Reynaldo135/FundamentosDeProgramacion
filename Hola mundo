@@ -1,0 +1,7 @@
+#include <iostream>  // Biblioteca para entrada y salida
+
+int main() {
+    std::cout << "Hola mundo" << std::endl;  // Imprimir en consola
+    return 0;  // Finaliza el programa
+}
+
