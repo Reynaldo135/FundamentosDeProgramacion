@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float A, B, C, D, E, F;
+
+    cout << "A: ";
+    cin >> A;
+    cout << "B: ";
+    cin >> B;
+
+    C = A + B;
+    D = A - B;
+    E = A * B;
+    F = A / B;
+
+    cout << "Suma: " << C << endl;
+    cout << "Resta: " << D << endl;
+    cout << "Multiplicacion: " << E << endl;
+    cout << "Division: " << F << endl;
+}
