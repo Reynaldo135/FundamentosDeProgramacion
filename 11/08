@@ -1,0 +1,14 @@
+Algoritmo SUMA
+	Escribir "ingrese el primer num..."
+	Leer A
+	Escribir "ingresa el segundo num..."
+	Leer B
+	Escribir "el resultado de la suma"
+	C <- A+B
+	Escribir "El resultado de resta"
+	C <- A-B 
+	Escribir "el resultado de la multiplicacion"
+	C <- A*B
+	Escribir "el resultado de la division"
+	C <- A/B
+FinAlgoritmo
