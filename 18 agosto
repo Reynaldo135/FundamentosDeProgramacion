@@ -1,0 +1,23 @@
+int main() {
+    // Declarar variables
+    float C, T, I;
+    int N;
+
+    // Pedir datos al usuario
+    cout << "Ingrese el capital (C): ";
+    cin >> C;
+
+    cout << "Ingrese la tasa de interes (T en decimal, ej. 0.05 para 5%): ";
+    cin >> T;
+
+    cout << "Ingrese el numero de anios (N): ";
+    cin >> N;
+
+    // Calculo del interes simple
+    I = C * T * N;
+
+    // Mostrar resultado
+    cout << "El interes simple ganado es: " << I << endl;
+
+    return 0;
+}
