@@ -1,25 +1,19 @@
-#include <stdio.h>
+#include <iostream> // librerias
+//utilizar la salida y la entrada estandar teclado y monitor
+using namespace std;
 
-int main() {
-    // Declarar variables
-    float C, T, I;
-    int N;
-
-    // Pedir datos al usuario
-    cout << "Ingrese el capital (C): ";
-    cin >> C;
-
-    cout << "Ingrese la tasa de interes (T en decimal, ej. 0.05 para 5%): ";
-    cin >> T;
-
-    cout << "Ingrese el numero de anios (N): ";
-    cin >> N;
-
-    // Calculo del interes simple
-    I = C * T * N;
-
-    // Mostrar resultado
-    cout << "El interes simple ganado es: " << I << endl;
+int main()
+{
+    //declarar variables en C++
+    int N,C,T,I;
+    cout<<"Ingrese el primer numero.. ";
+    cin>>C;
+    cout<<"Ingrese la tasa de interes.. ";
+    cin>>T;
+    cout<<"Ingrese el numero de anios.. ";
+    cin>>N;
+    I=C*T*N;
+    cout<<"El interes simple ganado es; "<<I<<endl;
 
     return 0;
 }
