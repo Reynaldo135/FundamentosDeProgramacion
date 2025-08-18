@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main() {
     // Declarar variables
     float C, T, I;
