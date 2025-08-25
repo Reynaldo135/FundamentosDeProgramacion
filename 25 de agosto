@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int HI_HH, HI_MM, HI_SS; // Hora inicial
+    int HF_HH, HF_MM, HF_SS; // Hora final
+    
+    // Leer hora inicial
+    cout << "Ingrese la hora inicial:" << endl;
+    cout << "Horas: ";
+    cin >> HI_HH;
+    cout << "Minutos: ";
+    cin >> HI_MM;
+    cout << "Segundos: ";
+    cin >> HI_SS;
+    
+    // Leer hora final
+    cout << "\nIngrese la hora final:" << endl;
+    cout << "Horas: ";
+    cin >> HF_HH;
+    cout << "Minutos: ";
+    cin >> HF_MM;
+    cout << "Segundos: ";
+    cin >> HF_SS;
+    
+    // Convertir a segundos
+    int segundos_inicial = HI_HH * 3600 + HI_MM * 60 + HI_SS;
+    int segundos_final = HF_HH * 3600 + HF_MM * 60 + HF_SS;
+    
+    // Calcular diferencia en segundos
+    int diferencia_segundos = segundos_final - segundos_inicial;
+    
+    // Convertir a horas, minutos y segundos
+    int dif_horas = diferencia_segundos / 3600;
+    int resto_segundos = diferencia_segundos % 3600;
+    int dif_minutos = resto_segundos / 60;
+    int dif_segundos = resto_segundos % 60;
+    
+    // Mostrar resultado
+    cout << "\nDiferencia entre las horas:" << endl;
+    cout << dif_horas << " horas, " 
+         << dif_minutos << " minutos, " 
+         << dif_segundos << " segundos" << endl;
+    
+    return 0;
+}
