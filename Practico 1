@@ -1,0 +1,442 @@
+1 
+a)
+#include <iostream>
+using namespace std;
+
+int main() {
+    char opcion;
+
+    cout << "El auto esta apagado." << endl;
+    cout << "¿Quieres encenderlo? (s/n): ";
+    cin >> opcion;
+
+    if (opcion == 's' || opcion == 'S') {
+        cout << "Encendiste el auto." << endl;
+        cout << "¿Quieres conducir? (s/n): ";
+        cin >> opcion;
+
+        if (opcion == 's' || opcion == 'S') {
+            cout << "Estas conduciendo el auto." << endl;
+            cout << "¿Quieres detener el auto? (s/n): ";
+            cin >> opcion;
+
+            if (opcion == 's' || opcion == 'S') {
+                cout << "Detuviste el auto." << endl;
+            } else {
+                cout << "Sigues conduciendo..." << endl;
+            }
+        } else {
+            cout << "No condujiste, el auto sigue encendido." << endl;
+        }
+    } else {
+        cout << "El auto sigue apagado." << endl;
+    }
+
+    return 0;
+} 
+b) 
+#include <iostream>
+using namespace std;
+
+int main() {
+    char opcion;
+
+    cout << "El celular esta en tu mano." << endl;
+    cout << "¿Quieres marcar un numero? (s/n): ";
+    cin >> opcion;
+
+    if (opcion == 's' || opcion == 'S') {
+        cout << "Marcaste el numero." << endl;
+        cout << "¿Quieres llamar? (s/n): ";
+        cin >> opcion;
+
+        if (opcion == 's' || opcion == 'S') {
+            cout << "La llamada esta en curso 📞" << endl;
+            cout << "¿Quieres colgar? (s/n): ";
+            cin >> opcion;
+
+            if (opcion == 's' || opcion == 'S') {
+                cout << "Colgaste la llamada." << endl;
+            } else {
+                cout << "La llamada continua..." << endl;
+            }
+        } else {
+            cout << "No realizaste la llamada." << endl;
+        }
+    } else {
+        cout << "No marcaste ningun numero." << endl;
+    }
+
+    return 0;
+}
+c) #include <iostream>
+#include <cmath> // para sqrt
+using namespace std;
+
+int main() {
+    float a, b, c, discriminante, x1, x2;
+
+    cout << "Resolver ax^2 + bx + c = 0" << endl;
+    cout << "Ingresa a: ";
+    cin >> a;
+    cout << "Ingresa b: ";
+    cin >> b;
+    cout << "Ingresa c: ";
+    cin >> c;
+
+    if (a == 0) {
+        cout << "No es ecuacion cuadratica, a no puede ser 0." << endl;
+    } else {
+        discriminante = (b * b) - (4 * a * c);
+
+        if (discriminante > 0) {
+            x1 = (-b + sqrt(discriminante)) / (2 * a);
+            x2 = (-b - sqrt(discriminante)) / (2 * a);
+            cout << "Dos soluciones reales: x1 = " << x1 << " y x2 = " << x2 << endl;
+        } else if (discriminante == 0) {
+            x1 = -b / (2 * a);
+            cout << "Una solucion real doble: x = " << x1 << endl;
+        } else {
+            cout << "No hay soluciones reales (discriminante negativo)." << endl;
+        }
+    }
+
+    return 0;
+}
+
+2 
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float D, radio, circunferencia, area, volumen;
+
+    cout << "Ingresa el diametro de la esfera: ";
+    cin >> D;
+
+    radio = D / 2.0;
+
+    circunferencia = 2 * M_PI * radio;
+    area = 4 * M_PI * pow(radio, 2);
+    volumen = (4.0 / 3.0) * M_PI * pow(radio, 3);
+
+    cout << "Circunferencia: " << circunferencia << endl;
+    cout << "Area: " << area << endl;
+    cout << "Volumen: " << volumen << endl;
+
+    return 0;
+}
+3
+#include <iostream>
+using namespace std;
+
+int main() {
+    float examen1, examen2, examen3, final, proyecto, notaFinal;
+
+    cout << "Ingresa las notas de los 3 examenes (sobre 40 cada uno): ";
+    cin >> examen1 >> examen2 >> examen3;
+
+    cout << "Ingresa la nota del examen final (sobre 40): ";
+    cin >> final;
+
+    cout << "Ingresa la nota del proyecto final (sobre 20): ";
+    cin >> proyecto;
+
+    notaFinal = examen1 + examen2 + examen3 + final + proyecto;
+
+    cout << "La nota final del alumno es: " << notaFinal << endl;
+
+    return 0;
+}
+4
+#include <iostream>
+using namespace std;
+
+int main() {
+    string nombre;
+    float horas, precioHora, salarioBruto, descuento, salarioNeto;
+
+    cout << "Nombre del trabajador: ";
+    cin >> nombre;
+
+    cout << "Horas trabajadas al mes: ";
+    cin >> horas;
+
+    cout << "Precio por hora: ";
+    cin >> precioHora;
+
+    salarioBruto = horas * precioHora;
+
+    if (salarioBruto > 8272) {
+        descuento = salarioBruto * 0.13;
+    } else {
+        descuento = 0;
+    }
+
+    salarioNeto = salarioBruto - descuento;
+
+    cout << "Trabajador: " << nombre << endl;
+    cout << "Salario bruto: " << salarioBruto << endl;
+    cout << "Descuento RC-IVA: " << descuento << endl;
+    cout << "Salario neto: " << salarioNeto << endl;
+
+    return 0;
+}
+5
+#include <iostream>
+using namespace std;
+
+int main() {
+    float C, T, I;
+    int N;
+
+    cout << "Ingresa el capital (C): ";
+    cin >> C;
+
+    cout << "Ingresa la tasa de interes (%): ";
+    cin >> T;
+
+    cout << "Ingresa el numero de años: ";
+    cin >> N;
+
+    I = (C * T * N) / 100;
+
+    cout << "El interes simple ganado es: " << I << endl;
+
+    return 0;
+}
+6
+#include <iostream>
+using namespace std;
+
+int main() {
+    int h, m, s;
+    string periodo;
+
+    cout << "Ingresa la hora (HH MM SS) en formato 24h: ";
+    cin >> h >> m >> s;
+
+    if (h == 0) {
+        h = 12;
+        periodo = "AM";
+    } else if (h < 12) {
+        periodo = "AM";
+    } else if (h == 12) {
+        periodo = "PM";
+    } else {
+        h = h - 12;
+        periodo = "PM";
+    }
+
+    cout << "Hora en formato 12h: " << h << ":" << m << ":" << s << " " << periodo << endl;
+
+    return 0;
+}
+7
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float C, T, M;
+    int N;
+
+    cout << "Ingresa el capital (C): ";
+    cin >> C;
+
+    cout << "Ingresa la tasa de interes (%): ";
+    cin >> T;
+
+    cout << "Ingresa el numero de años: ";
+    cin >> N;
+
+    M = C * pow(1 + T / 100, N);
+
+    cout << "El monto final con interes compuesto es: " << M << endl;
+    cout << "El interes ganado es: " << M - C << endl;
+
+    return 0;
+}
+8
+#include <iostream>
+using namespace std;
+
+int main() {
+    float A, B, C, D, E, F;
+    float determinante, x, y;
+
+    cout << "Ingresa A, B y C: ";
+    cin >> A >> B >> C;
+
+    cout << "Ingresa D, E y F: ";
+    cin >> D >> E >> F;
+
+    determinante = A * E - B * D;
+
+    if (determinante == 0) {
+        cout << "El sistema no tiene solucion unica." << endl;
+    } else {
+        x = (C * E - B * F) / determinante;
+        y = (A * F - C * D) / determinante;
+
+        cout << "Solucion: X = " << x << " , Y = " << y << endl;
+    }
+
+    return 0;
+}
+9
+#include <iostream>
+using namespace std;
+
+int main() {
+    int segundos, horas, minutos, resto;
+
+    cout << "Ingresa la cantidad de segundos: ";
+    cin >> segundos;
+
+    horas = segundos / 3600;
+    resto = segundos % 3600;
+    minutos = resto / 60;
+    segundos = resto % 60;
+
+    cout << horas << " hora(s), " << minutos << " minuto(s), " << segundos << " segundo(s)" << endl;
+
+    return 0;
+}
+10
+#include <iostream>
+using namespace std;
+
+int main() {
+    int h1, m1, s1, h2, m2, s2;
+    int total1, total2, dif, dh, dm, ds;
+
+    cout << "Hora inicial (HH MM SS): ";
+    cin >> h1 >> m1 >> s1;
+
+    cout << "Hora final (HH MM SS): ";
+    cin >> h2 >> m2 >> s2;
+
+    total1 = h1 * 3600 + m1 * 60 + s1;
+    total2 = h2 * 3600 + m2 * 60 + s2;
+
+    dif = total2 - total1;
+
+    if (dif < 0) {
+        cout << "Error: la hora final es menor que la inicial." << endl;
+    } else {
+        dh = dif / 3600;
+        dif %= 3600;
+        dm = dif / 60;
+        ds = dif % 60;
+
+        cout << "Diferencia: " << dh << " horas, " << dm << " minutos, " << ds << " segundos." << endl;
+    }
+
+    return 0;
+}
+11
+#include <iostream>
+using namespace std;
+
+int main() {
+    float P, costo;
+
+    cout << "Ingresa el peso de la carta en gramos: ";
+    cin >> P;
+
+    if (P > 0 && P < 50) costo = 1.50;
+    else if (P <= 100) costo = 4.00;
+    else if (P <= 200) costo = 6.00;
+    else if (P <= 350) costo = 10.50;
+    else if (P <= 500) costo = 15.00;
+    else {
+        cout << "NO PUEDE ENVIAR COMO CARTA" << endl;
+        return 0;
+    }
+
+    cout << "El costo del envio es: Bs. " << costo << endl;
+
+    return 0;
+}
+12
+#include <iostream>
+using namespace std;
+
+int main() {
+    int dia, mes;
+
+    cout << "Ingresa el dia: ";
+    cin >> dia;
+    cout << "Ingresa el mes (1-12): ";
+    cin >> mes;
+
+    if ((mes == 9 && dia >= 21) || (mes == 10) || (mes == 11) || (mes == 12 && dia < 21))
+        cout << "Primavera" << endl;
+    else if ((mes == 12 && dia >= 21) || (mes == 1) || (mes == 2) || (mes == 3 && dia < 21))
+        cout << "Verano" << endl;
+    else if ((mes == 3 && dia >= 21) || (mes == 4) || (mes == 5) || (mes == 6 && dia < 21))
+        cout << "Otono" << endl;
+    else
+        cout << "Invierno" << endl;
+
+    return 0;
+}
+13
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    float a, b, c, d, x1, x2;
+
+    cout << "Resolver ax^2 + bx + c = 0" << endl;
+    cout << "Ingresa a, b y c: ";
+    cin >> a >> b >> c;
+
+    if (a == 0) {
+        cout << "No es cuadratica, es lineal." << endl;
+    } else {
+        d = b*b - 4*a*c;
+
+        if (d > 0) {
+            x1 = (-b + sqrt(d)) / (2*a);
+            x2 = (-b - sqrt(d)) / (2*a);
+            cout << "Dos soluciones reales: " << x1 << " y " << x2 << endl;
+        } else if (d == 0) {
+            x1 = -b / (2*a);
+            cout << "Una solucion doble: " << x1 << endl;
+        } else {
+            cout << "No hay soluciones reales (discriminante negativo)." << endl;
+        }
+    }
+
+    return 0;
+}
+14
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hamb, hambQ, papas, soda;
+    float total;
+
+    cout << "Cantidad de hamburguesas (3Bs c/u): ";
+    cin >> hamb;
+
+    cout << "Cantidad de hamburguesas con queso (5Bs c/u): ";
+    cin >> hambQ;
+
+    cout << "Cantidad de papas fritas (2Bs c/u): ";
+    cin >> papas;
+
+    cout << "Cantidad de sodas (2.5Bs c/u): ";
+    cin >> soda;
+
+    total = hamb*3 + hambQ*5 + papas*2 + soda*2.5;
+
+    cout << "El total a pagar es: Bs. " << total << endl;
+
+    return 0;
+}
