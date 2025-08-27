@@ -51,7 +51,7 @@ int main() {
         cin >> opcion;
 
         if (opcion == 's' || opcion == 'S') {
-            cout << "La llamada esta en curso 📞" << endl;
+            cout << "La llamada esta en curso " << endl;
             cout << "¿Quieres colgar? (s/n): ";
             cin >> opcion;
 
