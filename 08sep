@@ -1,0 +1,53 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int opcion;
+    float R, L, B, H, A, P = 3.141516;
+
+    do {
+        cout << "menu" << endl;
+        cout << "1. area de circunferencia" << endl;
+        cout << "2. area de cuadrado" << endl;
+        cout << "3. area de triangulo" << endl;
+        cout << "0. salir" << endl;
+        cout << "ingresar la opcion: ";
+        cin >> opcion;   // <-- aquí estaba el error (faltaba ; )
+
+        switch(opcion) {
+            case 1:
+                cout << "ingrese el radio del area: " << endl;
+                cin >> R;
+                A = P * R * R;
+                cout << "el area es: " << A << endl;
+                break;
+
+            case 2:
+                cout << "ingrese el lado: ";
+                cin >> L;
+                A = L * L;
+                cout << "el area es: " << A << endl;
+                break;
+
+            case 3:
+                cout << "ingrese la base: ";
+                cin >> B;
+                cout << "ingrese la altura: ";
+                cin >> H;
+                A = (B * H) / 2;
+                cout << "el area es: " << A << endl;
+                break;
+
+            case 0:
+                cout << "saliendo..." << endl;
+                break;
+
+            default:
+                cout << "opcion invalida" << endl;
+                break;
+        }
+    } while(opcion != 0);
+
+    return 0;
+}
