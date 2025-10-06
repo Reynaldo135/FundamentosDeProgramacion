@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    int digito;
+    int pares = 0;  
+
+    cout << "Ingrese un numero: ";
+    cin >> N;
+
+    int copia = N;  
+
+    while (N > 0) {
+        digito = N % 10;  
+        if (digito % 2 == 0) {
+            pares = pares * 10 + digito;  
+        }
+        N = N / 10;
+    }
+    int resultado = 0;
+    while (pares > 0) {
+        resultado = resultado * 10 + (pares % 10);
+        pares = pares / 10;
+    }
+
+    cout << "Los digitos pares de " << copia << " son: " << resultado << endl;
+
+    return 0;
+}
