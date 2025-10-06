@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, d;           // usa "int", no "Int"
+    float suma = 0;     // inicializa la suma
+
+    cout << "Ingrese el numero: ";  // faltaba cerrar las comillas
+    cin >> N;
+
+    int Nbackup = N;    // guardamos el número original
+
+    while (N > 0) {
+        d = N % 10;     // saca el último dígito
+        N = N / 10;     // quita el último dígito
+        suma = suma + d; // suma los dígitos
+    }
+
+    cout << "La suma de los digitos de " << Nbackup << " es: " << suma << endl;
+
+    return 0;
+}
