@@ -1,0 +1,165 @@
+1.- #include <iostream>
+using namespace std;
+
+int main() {
+    int n, suma = 0;
+    
+    cout << "=============================" << endl;
+    cout << "     SUMA DE DIGITOS" << endl;
+    cout << "=============================" << endl;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    
+    int temp = n;
+    while(temp > 0) {
+        suma = suma + (temp % 10);
+        temp = temp / 10;
+    }
+    
+    cout << "Numero: " << n << endl;
+    cout << "Suma de digitos: " << suma << endl;
+    cout << "==================" << endl;
+    
+    return 0;
+}
+2.-#include <iostream>
+using namespace std;
+
+int main() {
+    int n, z = 0;
+    
+    cout << "=============================" << endl;
+    cout << "     INVERTIR NUMERO" << endl;
+    cout << "=============================" << endl;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    
+    int temp = n;
+    while(temp > 0) {
+        z = z * 10 + (temp % 10);
+        temp = temp / 10;
+    }
+    
+    cout << "Numero original: " << n << endl;
+    cout << "Numero invertido: " << z << endl;
+    cout << "==================" << endl;
+    
+    return 0;
+}
+3.-#include <iostream>
+using namespace std;
+
+int main() {
+    int n, contador = 0;
+    
+    cout << "=============================" << endl;
+    cout << "     DIGITOS PARES" << endl;
+    cout << "=============================" << endl;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    
+    int temp = n;
+    while(temp > 0) {
+        int digito = temp % 10;
+        if(digito % 2 == 0) {
+            contador = contador + 1;
+        }
+        temp = temp / 10;
+    }
+    
+    cout << "Numero: " << n << endl;
+    cout << "Cantidad de digitos pares: " << contador << endl;
+    cout << "==================" << endl;
+    
+    return 0;
+}
+4.-#include <iostream>
+using namespace std;
+
+int main() {
+    int n, invertido = 0;
+    
+    cout << "=============================" << endl;
+    cout << "     NUMERO CAPICUA" << endl;
+    cout << "=============================" << endl;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    
+    int temp = n;
+    while(temp > 0) {
+        invertido = invertido * 10 + (temp % 10);
+        temp = temp / 10;
+    }
+    
+    cout << "Numero: " << n << endl;
+    cout << "Numero invertido: " << invertido << endl;
+    
+    if(n == invertido) {
+        cout << "ES CAPICUA" << endl;
+    } else {
+        cout << "NO ES CAPICUA" << endl;
+    }
+    cout << "==================" << endl;
+    
+    return 0;
+}
+5.-#include <iostream>
+using namespace std;
+
+int main() {
+    int n, complemento = 0;
+    
+    cout << "=============================" << endl;
+    cout << "   COMPLEMENTO A 9" << endl;
+    cout << "=============================" << endl;
+    cout << "Ingrese un numero: ";
+    cin >> n;
+    
+    int temp = n;
+    int multiplicador = 1;
+    
+    while(temp > 0) {
+        int digito = temp % 10;
+        complemento = (9 - digito) * multiplicador + complemento;
+        multiplicador = multiplicador * 10;
+        temp = temp / 10;
+    }
+    
+    cout << "Numero original: " << n << endl;
+    cout << "Complemento a 9: " << complemento << endl;
+    cout << "==================" << endl;
+    
+    return 0;
+} 
+6.-#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    bool baseCorrecta = true;
+    
+    cout << "=============================" << endl;
+    cout << "   VERIFICAR BASE 8" << endl;
+    cout << "=============================" << endl;
+    cout << "Ingrese un numero en base 8: ";
+    cin >> n;
+    
+    int temp = n;
+    while(temp > 0) {
+        int digito = temp % 10;
+        if(digito >= 8) {
+            baseCorrecta = false;
+            cout << "Digito invalido: " << digito << endl;
+        }
+        temp = temp / 10;
+    }
+    
+    if(baseCorrecta) {
+        cout << "El numero SI corresponde a base 8" << endl;
+    } else {
+        cout << "El numero NO corresponde a base 8" << endl;
+    }
+    cout << "==================" << endl;
+    
+    return 0;
+}
