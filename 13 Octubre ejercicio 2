@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+ int p, c, td, t, tt;
+ double q, d, pp=0.01;
+ do
+ {
+      cout<<"Ingrese el precio del producto: ";
+      cin>> p;
+ }while (p<0);
+ do 
+ {
+     cout<<"Ingrese la cantidad pedida: ";
+     cin>> c;
+ }while (c<0);
+ do
+ { 
+     cout<<"Ingrese la cantidad de descuento: ";
+     cin>> d;
+ }while (d<0);
+ t=p*c;
+ q=(double)d*pp;
+ td=t*q;
+ tt=t-td;
+ cout<<"El subtotal del pago es: "<<t<<endl;
+ cout<<"El monto del descuento es :"<<d<<endl;
+ cout<<"El totla del pago es:"<<tt<<endl;
+     
+    return 0;
+}
